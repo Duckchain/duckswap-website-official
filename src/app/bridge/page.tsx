@@ -7,7 +7,8 @@ import useBridgeSubRoutes from "@/components/BridgeSubRoute";
 
 enum Route {
     STARGATE = 'stargate',
-    SQUID = 'squid'
+    SQUID = 'squid',
+    WANCHAIN = 'wanchain'
 }
 
 const Bridge = () => {
@@ -22,7 +23,7 @@ const Bridge = () => {
         if (!tab) {
             push(`/bridge?tab=${Route.STARGATE}`);
         }
-    }, [push, tab])
+    }, [tab])
 
     return (
         <>
@@ -37,6 +38,9 @@ const Bridge = () => {
                         </ToggleButton>
                         <ToggleButton isActive={route === Route.SQUID} onClick={() => push(`/bridge?tab=${Route.SQUID}`)}>
                             <span>Squid</span>
+                        </ToggleButton>
+                        <ToggleButton isActive={route === Route.WANCHAIN} onClick={() => push(`/bridge?tab=${Route.WANCHAIN}`)}>
+                            <span>Wanchain</span>
                         </ToggleButton>
                     </div>
                 </div>

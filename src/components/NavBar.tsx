@@ -5,13 +5,43 @@ import Link from "next/link";
 import { Menu, X, Wallet } from "lucide-react";
 import NavImg from "@/assets/imgs/logo.png";
 import "@/app/globals.css";
+import { PiCaretDownBold, PiCaretRightBold } from 'react-icons/pi'
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openBridge, setOpenBridge] = useState(false);
+  const [openBridgeMB, setOpenBridgeMB] = useState(false);
+  const { push } = useRouter();
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const toggleMobileBridge = () => {
+    setOpenBridgeMB(!openBridgeMB)
+  }
+
+  enum Route {
+    STARGATE = 'stargate',
+    SQUID = 'squid',
+    WANCHAIN = 'wanchain'
+  }
+
+  const bridges = [
+    {
+      bridge: 'Stargate',
+      route: `/bridge?tab=${Route.STARGATE}`
+    },
+    {
+      bridge: 'Squid',
+      route: `/bridge?tab=${Route.SQUID}`
+    },
+    {
+      bridge: 'Wanchain',
+      route: `/bridge?tab=${Route.WANCHAIN}`
+    },
+  ]
 
   return (
     <nav>
@@ -70,19 +100,32 @@ const Header = () => {
           >
             Duckmap
           </Link>
-          <Link
-            href={"/bridge"}
-            className="text-lg hover:text-600  hover:duration-700"
-          >
-            Bridge
-          </Link>
+          <div>
+            <button
+              className="text-lg hover:text-600 hover:duration-700 relative"
+              onMouseOver={() => setOpenBridge(true)}
+              onMouseLeave={() => setOpenBridge(false)}
+            >
+              Bridge
+
+              {openBridge && <div className="w-40 border-[#FDB833] border shadow-md rounded-md flex flex-col items-center gap-y-2 p-1 absolute top-8 right-0">
+                {bridges.map((bridge, index) => {
+                  return (
+                    <Link href={bridge.route} key={index} className="py-2 px-1 hover:bg-[#FDB833] hover:text-white w-full rounded-md">
+                      {bridge.bridge}
+                    </Link>
+                  )
+                })}
+              </div>}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Devices */}
         <div
           className={`${isMenuOpen
-              ? "fixed inset-0 z-50 bg-black transition-opacity duration-300 ease-in-out"
-              : "hidden"
+            ? "fixed inset-0 z-50 bg-black transition-opacity duration-300 ease-in-out"
+            : "hidden"
             }`}
         >
           <div className="flex justify-between items-center text-white h-16 px-4 sm:px-6">
@@ -136,12 +179,23 @@ const Header = () => {
             >
               Duckmap
             </Link>
-            <Link
-              href={"/bridge"}
-              className="block px-3 py-2 text-base font-medium text-white relative"
+            <button
+              className="px-3 py-2 text-base font-medium text-white relative flex items-center gap-x-2 flex-col"
+              onClick={toggleMobileBridge}
             >
-              Bridge
-            </Link>
+              <span className="flex items-center gap-x-2">Bridge
+                {openBridgeMB ? (<PiCaretRightBold color="#FDB833" />) : (<PiCaretDownBold color="#FDB833" />)}</span>
+
+              {openBridgeMB && <div className="flex flex-col items-start gap-y-2 p-1">
+                {bridges.map((bridge, index) => {
+                  return (
+                    <Link href={bridge.route} key={index} className="font-medium text-base text-white">
+                      {bridge.bridge}
+                    </Link>
+                  )
+                })}
+              </div>}
+            </button>
           </div>
         </div>
       </div>

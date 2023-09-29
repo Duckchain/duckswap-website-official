@@ -1,11 +1,12 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-import { Stargate, Squid } from '@/routes/bridge';
+import { Stargate, Squid, Wanchain } from '@/routes/bridge';
 
 enum Route {
     STARGATE = 'stargate',
-    SQUID = 'squid'
+    SQUID = 'squid',
+    WANCHAIN = 'wanchain'
 }
 
 
@@ -19,6 +20,9 @@ const useBridgeSubRoutes = (routes: Route) => {
                 break;
             case Route.SQUID:
                 setComponent(() => Squid);
+                break;
+            case Route.WANCHAIN:
+                setComponent(() => Wanchain);
                 break;
             default:
                 setComponent(() => Stargate);
