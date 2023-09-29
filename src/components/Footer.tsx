@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PiTelegramLogoBold } from "react-icons/pi";
 
 const Footer = () => {
   return (
@@ -11,10 +12,8 @@ const Footer = () => {
         </div>
         <div className="flex items-center w-full md:w-[10%] justify-center gap-4 py-5 md:py-0">
           <Link 
-            href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="15" viewBox="0 0 7 15" fill="none">
-                <path d="M1.78694 14.5V7.93079H0V5.56556H1.78694V3.54535C1.78694 1.95785 2.84249 0.5 5.27471 0.5C6.25947 0.5 6.98766 0.59177 6.98766 0.59177L6.93028 2.80049C6.93028 2.80049 6.18765 2.79347 5.37725 2.79347C4.50015 2.79347 4.35963 3.18638 4.35963 3.83851V5.56556H7L6.88512 7.93079H4.35963V14.5H1.78694Z" fill="white"/>
-              </svg>
+            href="https://t.me/Duckchain_portal">
+            <PiTelegramLogoBold color="#fff" />
           </Link>
           <Link
             href="https://x.com/0xDuckchainLabs?s=20" target="_blank">
