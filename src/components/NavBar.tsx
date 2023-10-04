@@ -104,7 +104,11 @@ const Header = () => {
             <button
               className="text-lg hover:text-600 hover:duration-700 relative"
               onMouseOver={() => setOpenBridge(true)}
-              onMouseLeave={() => setOpenBridge(false)}
+              onMouseLeave={() => {
+                setTimeout(() => {
+                  setOpenBridge(false)
+                }, 1000)
+              }}
             >
               Bridge
 
