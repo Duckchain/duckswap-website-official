@@ -2,7 +2,8 @@ export function Duckonomics() {
     const allocations = [
         "Team 10%",
         "IDO 20%",
-        "Private sale  %",
+        "Presale  15%",
+        "Private Sale 3%",
         "Liquidity  10%",
         "Marketing 10%",
         "Development 10%",
@@ -54,6 +55,95 @@ export function Duckonomics() {
                             </p>
                         )
                     })}
+                </div>
+            </div>
+            <div className="mx-auto w-5/6 space-y-2">
+                <h3 className="text-[#FDB833] text-xl font-semibold">Distributions
+                </h3>
+                <div className="overflow-x-auto">
+                    <table className="table-auto w-full">
+                        <tbody className="text-white">
+                            <tr>
+                                <td className="border px-4 py-2">Presale</td>
+                                <td className="border px-4 py-2">15%</td>
+                                <td className="border px-4 py-2">1,500,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Initial Distribution</td>
+                                <td className="border px-4 py-2">Early Supporters</td>
+                                <td className="border px-4 py-2">5%</td>
+                                <td className="border px-4 py-2">500,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Total</td>
+                                <td className="border px-4 py-2"></td>
+                                <td className="border px-4 py-2">20%</td>
+                                <td className="border px-4 py-2">2,000,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Development Fund</td>
+                                <td className="border px-4 py-2"></td>
+                                <td className="border px-4 py-2">20%</td>
+                                <td className="border px-4 py-2">2,000,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Ecosystem Partnerships</td>
+                                <td className="border px-4 py-2">5%</td>
+                                <td className="border px-4 py-2">500,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Ecosystem Development</td>
+                                <td className="border px-4 py-2">Marketing and Promotion</td>
+                                <td className="border px-4 py-2">10%</td>
+                                <td className="border px-4 py-2">1,000,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Team</td>
+                                <td className="border px-4 py-2">5%</td>
+                                <td className="border px-4 py-2">500,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Total</td>
+                                <td className="border px-4 py-2"></td>
+                                <td className="border px-4 py-2">40%</td>
+                                <td className="border px-4 py-2">4,000,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Staking Rewards</td>
+                                <td className="border px-4 py-2">20%</td>
+                                <td className="border px-4 py-2">2,000,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Staking and Rewards</td>
+                                <td className="border px-4 py-2">Validator Rewards</td>
+                                <td className="border px-4 py-2">5%</td>
+                                <td className="border px-4 py-2">500,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Total</td>
+                                <td className="border px-4 py-2"></td>
+                                <td className="border px-4 py-2">25%</td>
+                                <td className="border px-4 py-2">2,500,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Community Grants and Initiatives</td>
+                                <td className="border px-4 py-2">10%</td>
+                                <td className="border px-4 py-2">1,000,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Community and Adoption</td>
+                                <td className="border px-4 py-2">User Adoption Incentives</td>
+                                <td className="border px-4 py-2">5%</td>
+                                <td className="border px-4 py-2">500,000,000</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-4 py-2">Total</td>
+                                <td className="border px-4 py-2"></td>
+                                <td className="border px-4 py-2">15%</td>
+                                <td className="border px-4 py-2">1,500,000,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
